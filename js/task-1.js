@@ -1,20 +1,26 @@
 const categories = document.querySelector("#categories");
-const liEl = document.querySelectorAll(".item");
-const newEl = liEl.map((category) => {
+const liEl = (categories.children);
+// const newEl = liEl.map((category) => {
     // console.log(`value ${category}`)
-})
+// })
 
 console.log(`Number of categories: ${categories.children.length}`);
-console.log(newEl);
+console.log(liEl);
 
-// newEl.forEach(category, index => {
-//   console.log(`Index ${index}, value ${category}`);
+// categories.forEach(arr => {
+//   console.log(`category: ${category} index: ${index} arr: ${arr}`);
 // });
 
-// function getel() {
-    
-// }
 
+
+function getel() {
+    
+liEl.map(arr => {
+    console.log(`1arr: ${arr}`);
+  });
+  return arr;
+}
+console.log(getel(1));
 
 
 
