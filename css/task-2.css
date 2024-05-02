@@ -1,0 +1,11 @@
+.gallery {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+
+
+.list-item {
+    margin-bottom: 16px;
+}
