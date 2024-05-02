@@ -5,7 +5,7 @@ const liEl = (categories.children);
 // })
 
 console.log(`Number of categories: ${categories.children.length}`);
-console.log(liEl);
+// console.log(liEl);
 
 // categories.forEach(arr => {
 //   console.log(`category: ${category} index: ${index} arr: ${arr}`);
@@ -13,14 +13,22 @@ console.log(liEl);
 
 
 
-function getel() {
+function getel(liEl) {
     
-liEl.map(arr => {
-    console.log(`1arr: ${arr}`);
-  });
-  return arr;
+// liEl.map(arr => {
+//     console.log(`1arr: ${arr}`);
+//   });
+//   return arr;
+
+const newArr = [];
+
+for (const array of arguments) {
+  newArr.push(array);
 }
-console.log(getel(1));
+return newArr;
+
+}
+console.log(getel());
 
 
 
