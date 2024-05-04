@@ -11,8 +11,8 @@ function handleSubmit(event) {
         alert("All form fields must be filled in")
     }
     const info = {
-    email: elements.email.value,
-    password: elements.password.value,
+    email: elements.email.value.trim(),
+    password: elements.password.value.trim(),
     }
     console.log(info);
     form.reset()

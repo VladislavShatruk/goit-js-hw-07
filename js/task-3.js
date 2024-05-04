@@ -5,11 +5,11 @@ userName.addEventListener("input", handleInput);
 
 
 function handleInput(event) {
-    if (!(event.target.value == ' ' || event.target.value.length === 0)) {
-        spanName.textContent = event.target.value;
+
+    if (event.target.value.indexOf(" ")) {
+        spanName.textContent = event.target.value.trim();
     }
-        else {
-            spanName.textContent = "Anonymous";
-        }
-    console.log(event);
+    else {
+        spanName.textContent = "Anonymous";
+    }
 }
