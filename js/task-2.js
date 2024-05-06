@@ -29,22 +29,10 @@ const images = [
 
 const listEl = document.querySelector(".gallery");
 
-function addImages() {
-
-images.map(image => {
-
-  const newItem = document.createElement("li");
-  newItem.classList.add("list-item")
-
-  const newImg = document.createElement("img");
-  newImg.classList.add("item-image")
-  newImg.src = image.url;
-  newImg.alt = image.alt;
-  newImg.width = 360;
-
-  listEl.append(newItem);
-  newItem.append(newImg);
+const addImages = images
+.map(image =>  {
+  return `<li><img class="gallery-item" src="${image.url}" alt="${image.alt}"></li>`;
 })
-}
+.join("");
 
-console.log(addImages());
+listEl.insertAdjacentHTML("afterbegin", addImages);
