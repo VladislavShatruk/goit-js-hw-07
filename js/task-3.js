@@ -5,11 +5,13 @@ userName.addEventListener("input", handleInput);
 
 
 function handleInput(event) {
+    
+    event.target.value.trim();
 
-    if (event.target.value.indexOf(" ")) {
-        spanName.textContent = event.target.value.trim();
+    if (event.target.value === "" || event.target.value.trim() === "") {
+        spanName.textContent = "Anonymous";
     }
     else {
-        spanName.textContent = "Anonymous";
+        spanName.textContent = event.target.value.trim();
     }
 }

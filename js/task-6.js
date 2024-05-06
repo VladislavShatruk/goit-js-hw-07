@@ -14,6 +14,7 @@ btnDelete.addEventListener("click", handleDelete);
 
 
 function handleCreate() {
+
   boxes.innerHTML = "";
   const amount = inputNbr.value;
   createBoxes(amount);
@@ -23,9 +24,8 @@ function handleCreate() {
 
 
 function handleDelete() {
-  
-  const amount = inputNbr.value;
-  destroyBoxes(amount);
+
+  boxes.innerHTML = "";
   inputNbr.value = "";
 }
 
@@ -37,8 +37,14 @@ function createBoxes(amount) {
   if (amount <= 100 && amount >= 1) {
 
     for (let i = 0; i < amount; i++) {
-      const newDiv = document.createElement("div");
+
       const size = 30 + i * 10;
+
+      // const divBox = `<div margin = "5px" width = "${size}px" height = "${size}px" background-color = getRandomHexColor()></div>`
+
+      const newDiv = '<div class = "div-box"></div>';
+
+      // const newDiv = document.createElement("div");
       newDiv.style.margin = "5px";
       newDiv.style.width = `${size}px`;
       newDiv.style.height = `${size}px`;
@@ -46,13 +52,7 @@ function createBoxes(amount) {
       arr.push(newDiv);
     }
 
-    arr.map(element => boxes.append(element));
+    arr.map(element => boxes.insertAdjacentHTML("beforeend", element));
   }
   return;
-}
-
-
-
-function destroyBoxes(amount) {
-  boxes.innerHTML = "";
 }
