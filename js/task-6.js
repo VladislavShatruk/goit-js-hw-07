@@ -42,9 +42,9 @@ function createBoxes(amount) {
 
       // const divBox = `<div margin = "5px" width = "${size}px" height = "${size}px" background-color = getRandomHexColor()></div>`
 
-      const newDiv = '<div class = "div-box"></div>';
 
-      // const newDiv = document.createElement("div");
+      const newDiv = document.createElement("div");
+      // const divBox = '<div class = "div-box"></div>';
       newDiv.style.margin = "5px";
       newDiv.style.width = `${size}px`;
       newDiv.style.height = `${size}px`;
